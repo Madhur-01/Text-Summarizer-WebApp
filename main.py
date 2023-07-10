@@ -23,10 +23,9 @@ pipe = pipeline('summarization', model = model_ckpt )
 
 text_input = st.text_area("Input your text in English")
 
+
 if st.button("Summarize"):
     if text_input:
-        inputs = tokenizer.encode(text_input, return_tensors="pt", max_length=1024, truncation=True)
-        summary_ids = model.generate(inputs, max_length=150, min_length=40, num_beams=4)
-        summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-        st.write("## Summarized Text")
-        st.write(summary)
+        pred = pipe(text_input)
+        st.write("##Summarized Text")
+        st.write(pred[0].get("summary_text"))
