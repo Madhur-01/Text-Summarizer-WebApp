@@ -8,6 +8,7 @@ Created on Mon Jul 10 14:58:32 2023
 import streamlit as st
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from transformers import pipeline, set_seed
+import torch
 
 st.write("Text Summarizer WebApp")
 
