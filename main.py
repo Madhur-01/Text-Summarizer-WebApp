@@ -27,5 +27,5 @@ text_input = st.text_area("Input your text in English")
 if st.button("Summarize"):
     if text_input:
         pred = pipe(text_input)
-        st.write("##Summarized Text")
+        st.write("Summarized Text")
         st.write(pred[0].get("summary_text"))
