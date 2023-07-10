@@ -13,7 +13,7 @@ import torch
 st.write("Text Summarizer WebApp")
 
 
-model_ckpt = "google/pegasus-cnn_dailymail"
+model_ckpt = "t5-small"
 
 tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
 
