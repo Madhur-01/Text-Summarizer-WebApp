@@ -26,4 +26,4 @@ text_input = st.text_area("Input your text in English")
 if text_input:
     pred = pipe(text_input)
     st.write("##Summarized Text")
-    st.write(pred.get("summary_text"))
+    st.write(pred)
