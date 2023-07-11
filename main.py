@@ -14,7 +14,7 @@ st.write("Text Summarizer WebApp")
 
  
 
-tokenizer = AutoTokenizer.from_pretrained("Madhur-01/tokenizer")
+tokenizer = AutoTokenizer.from_pretrained("Madhur-01/text-summarization-model")
 
 model = AutoModelForSeq2SeqLM.from_pretrained("Madhur-01/text-summarization-model")
 
