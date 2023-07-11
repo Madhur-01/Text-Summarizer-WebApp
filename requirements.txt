@@ -1,5 +1,4 @@
 streamlit>=1.10.0
 transformers [sentencepiece]
 torch
-headless == true
-port == 8501
+
