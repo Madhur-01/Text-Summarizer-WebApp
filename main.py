@@ -18,7 +18,7 @@ tokenizer = AutoTokenizer.from_pretrained("Madhur-01/tokenizer")
 
 model = AutoModelForSeq2SeqLM.from_pretrained("Madhur-01/text-summarization-model")
 
-pipe = pipeline('summarization', model = model, tokenizer = tokenizer )
+pipe = pipeline('summarization', model = model )
 
 text_input = st.text_area("Input your text in English")
 
