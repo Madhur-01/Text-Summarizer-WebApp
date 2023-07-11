@@ -12,12 +12,11 @@ import torch
 
 st.write("Text Summarizer WebApp")
 
+ 
 
-model_ckpt = "t5-small"
+tokenizer = AutoTokenizer.from_pretrained("Madhur-01/tokenizer")
 
-tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
-
-model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(model_ckpt)
+model_pegasus = AutoModelForSeq2SeqLM.from_pretrained("Madhur-01/text-summarization-model")
 
 pipe = pipeline('summarization', model = model_ckpt )
 
