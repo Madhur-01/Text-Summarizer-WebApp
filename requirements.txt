@@ -1,5 +1,5 @@
 pip == 23.1.2
-streamlit>=1.10.0
+streamlit
 transformers [sentencepiece]
 torch
 
