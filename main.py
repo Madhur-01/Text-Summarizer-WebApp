@@ -16,15 +16,15 @@ st.write("Text Summarizer WebApp")
 
 tokenizer = AutoTokenizer.from_pretrained("Madhur-01/tokenizer")
 
-model_pegasus = AutoModelForSeq2SeqLM.from_pretrained("Madhur-01/text-summarization-model")
+model = AutoModelForSeq2SeqLM.from_pretrained("Madhur-01/text-summarization-model")
 
-pipe = pipeline('summarization', model = model_ckpt )
+pipe = pipeline('summarization', model = model, tokenizer = tokenizer )
 
 text_input = st.text_area("Input your text in English")
 
 
 if st.button("Summarize"):
     if text_input:
-        pred = pipe(text_input)
+        pred = pipe(text_input, max_length=150, min_length=40, do_sample=False)
         st.write("Summarized Text")
         st.write(pred[0].get("summary_text"))
