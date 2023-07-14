@@ -1,4 +1,5 @@
 # Text-Summarizer-WebApp
+https://huggingface.co/spaces/Madhur-01/text-summarizer
 
 Deployed the Text Summarizer WebApp on the Hugging Face Spaces platform using Streamlit and the T5 model. Integrated the PyMuPDF library for handling PDF files seamlessly. Leveraged the power of the T5 small model from Hugging Face to provide accurate and efficient text summarization. Demonstrated proficiency in deploying machine learning models and creating user-friendly applications. Contributed to the advancement of NLP technology by developing an interactive web application for text summarization.
 
